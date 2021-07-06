@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan card application</title>
+    <style>
+        span {
+            color: orchid;
+        }
+
+        .blue_txt {
+            color: blue;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        * {
+            margin: 1px 1px 1px 1px;
+        }
+
+        table.no_border,
+        tr.no_border,
+        td.no_border{
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: bisque;">
+        <div style="background-color: brown;">
+            <h5 style="color: white; text-align: center;">Request for new Pan card or/And changes and correction in PAN
+                data</h5>
+            <p style="color: white; font-style: italic; text-align: center;">Field marked with <span>*</span> are
+                mandotory </p>
+
+        </div>
+
+        <div style="font-weight:bold ;">
+            <table style="width: 100%;">
+                <tr>
+                    <td> </td>
+                    <td colspan="2">
+                        <p style="display: inline;"> <span>*</span>Weather Citizen of India </p>
+                        <div style="display: inline;">
+                            <label for="Yes" style="padding-left: 60px;">Yes</label>
+                            <input type="radio" name="citizenship" id="Yes">
+                            <label for="No" style="padding-left: 20px;">No</label>
+                            <input type="radio" name="citizenship" id="No">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p style="display: inline;">Permanent Account number(PAN)</p>
+                        <div style="display: inline; padding-left: 30px;">
+                            <input type="text" name="pan">
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" style="margin: 0px 1px 1px 0px;">
+                    </td>
+                    <td colspan="2">
+                        <p> <span>*</span>1.Name</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <p style="display: inline;">Title</p>
+                        <label for="Mr" style="padding-left: 20px;">Shri/Mr</label>
+                        <input type="radio" name="name" id="Mr">
+
+                        <label for="Mrs" style="padding-left: 20px;">Smt./Mrs</label>
+                        <input type="radio" name="name" id="Mrs">
+
+                        <label for="Ms" style="padding-left: 20px;">Kumari/Ms</label>
+                        <input type="radio" name="name" id="Ms">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p for="surName" style="display: inline;  ">Last Name/Surname</p>
+                        <p for="firstName" style="display: inline; padding-left:25px ;">First Name</p>
+                        <p for="middleName" style="display: inline; padding-left: 90px; ">Middle Name</p>
+                        <br>
+                        <br>
+                        <input type="text" id="surName">
+                        <input type="text" id="firstName">
+                        <input type="text" id="middleName">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p><span>*</span> Name as you like to be printed in the card
+                            <span class="blue_txt">(prefix like shri,smt,smt,kumari,Dr,Ms,CA,Mr,Mrs,Alis etc are not
+                                allowed)</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <input type="text" style="width: 20%;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>Details of parents <span class="blue_txt">(prefix like
+                                shri,smt,smt,kumari,Dr,Ms,CA,Mr,Mrs,Alis etc are not
+                                allowed) </span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                        <p for="singleMother">Weather mother is the single parent and you wish to apply for PAN by
+                            furnishing the name of your mother only</p>
+                    </td>
+                    <td>
+                        <div style="display: inline; width: 50%;">
+                            <label for="Yes" style="padding-left: 60px;">Yes</label>
+                            <input type="radio" name="singleMother" id="Yes">
+                            <label for="No" style="padding-left: 20px;">No</label>
+                            <input type="radio" name="singleMother" id="No">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="fatherName">
+                    </td>
+                    <td colspan="2">
+                        <p><span>*</span>
+                            Father's Name <span class=blue_txt> (Maditory field, even maried women should give Father's
+                                nmae only)</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p for="surName" style="display: inline;  ">Last Name/Surname</p>
+                        <p for="firstName" style="display: inline; padding-left:25px ;">First Name</p>
+                        <p for="middleName" style="display: inline; padding-left: 90px; ">Middle Name</p>
+                        <br>
+                        <br>
+                        <input type="text" id="surName">
+                        <input type="text" id="firstName">
+                        <input type="text" id="middleName">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="motherName">
+                    </td>
+
+                    <td colspan="2"><span class="blue_txt">Mother's Name(This filed is optional)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p for="surName" style="display: inline;  ">Last Name/Surname</p>
+                        <p for="firstName" style="display: inline; padding-left:25px ;">First Name</p>
+                        <p for="middleName" style="display: inline; padding-left: 90px; ">Middle Name</p>
+                        <br>
+                        <br>
+                        <input type="text" id="surName">
+                        <input type="text" id="firstName">
+                        <input type="text" id="middleName">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                        <p>Select the parent name which to be printed on the card
+                            <span class="blue_txt">(Incase no option Father name will be printed)</span>
+                        </p>
+                    </td>
+                    <td style="width: 50%;">
+                        <div style="display: inline; width: 50%;">
+                            <label for="Father Name" style="padding-left: 60px;">Father Name</label>
+                            <input type="radio" name="fatherName" id="Father Name">
+                            <label for="Mother Name" style="padding-left: 20px;">Mother Name</label>
+                            <input type="radio" name="motherName" id="Mother Name">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="dob">
+                    </td>
+                    <td style="width: 50%;">
+                        <p>
+                            <span>*</span> Date of Birth/incorparation/agreement/partnership or trust deed/Formation of
+                            Body of individual/ Association peson
+                        </p>
+                    </td>
+                    <td>
+                        <p style="display: inline;">DD</p>
+                        <p style="display: inline; margin-left: 15px;">MM</p>
+                        <p style="display: inline; margin-left: 15px;">YYYY</p>
+                        <br>
+                        <select name="date" id="DD">
+                            <option value="DD">DD</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                        </select>
+
+                        <select name="month" id="MM">
+                            <option value="MM">MM</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                        </select>
+
+                        <select name="Yeae" id="YYYY">
+                            <option value="YYYY">YYYY</option>
+                            <option value="01">2001</option>
+                            <option value="02">2002</option>
+                            <option value="03">2003</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="gender">
+                    </td>
+                    <td style="width: 50%;">
+                        <p> <span>*</span>Gender
+                        </p>
+                    </td>
+                    <td style="width: 50%;">
+                        <div style="display: inline; width: 50%;">
+                            <label for="male" style="padding-left: 60px;">Male</label>
+                            <input type="radio" name="gender" id="male">
+                            <label for="female" style="padding-left: 20px;">female</label>
+                            <input type="radio" name="gender" id="female">
+                            <label for="transgender" style="padding-left: 20px;">Transgender</label>
+                            <input type="radio" name="gender" id="transgender">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="photo">
+                    </td>
+                    <td colspan="2">
+                        <p>
+                            Photo Mismatch
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="signature">
+                    </td>
+                    <td colspan="2">
+                        <p>
+                            Signature Mismatch
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="address">
+                    </td>
+                    <td style="width: 50%;">
+                        <span>*</span> Address for Commucation
+                    </td>
+                    <td style="width: 50%;">
+                        <label for="office">Office</label>
+                        <input type="radio" name="address" id="office">
+                        <label for="resdence">Residential</label>
+                        <input type="radio" name="address" id="resdence">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>Office Address(to be filled only incase of address)</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>Flat/Door number</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>State/Lane/Post Office</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>Area/Locality/Taluk</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>Town/city/District</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>State and Union Terrtiory</p>
+                    </td>
+                    <td style="width: 50%;">
+                        <select name="state" id="state" class="form-control">
+                            <option value="sut">---Please Select---</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>PIN</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>Country</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <select name="country" disabled>
+                        <option value="India">India</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>ZIP</p>
+                    </td>
+                    <td style="width: 50%;">
+                    <input type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="otheraddress">
+                    </td>
+                    <td colspan="2">
+                        <p>If you want to add other address, give required details, and submit the proof</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="telephone">
+                    </td>
+                    <td style="width: 50%;">
+                        <p>
+                            <span>*</span> Telephone Number <br>(country code is compulsory)
+                        </p>
+                    </td>
+                    <td style="width: 50%;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <p>Country Code(ISD code)</p><br>
+                                <select name="countryCode" >
+                                        <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                                        <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                                        <option data-countryCode="AO" value="244">Angola (+244)</option>
+                                        <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                                        <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                                        <option data-countryCode="AR" value="54">Argentina (+54)</option>
+                                        <option data-countryCode="AM" value="374">Armenia (+374)</option>
+                                        <option data-countryCode="AW" value="297">Aruba (+297)</option>
+                                        <option data-countryCode="AU" value="61">Australia (+61)</option>
+                                        <option data-countryCode="AT" value="43">Austria (+43)</option>
+                                        <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+                                        <option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
+                                        <option data-countryCode="BH" value="973">Bahrain (+973)</option>
+                                        <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
+                                        <option data-countryCode="BB" value="1246">Barbados (+1246)</option>
+                                        <option data-countryCode="BY" value="375">Belarus (+375)</option>
+                                        <option data-countryCode="BE" value="32">Belgium (+32)</option>
+                                        <option data-countryCode="BZ" value="501">Belize (+501)</option>
+                                        <option data-countryCode="BJ" value="229">Benin (+229)</option>
+                                        <option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
+                                        <option data-countryCode="BT" value="975">Bhutan (+975)</option>
+                                        <option data-countryCode="BO" value="591">Bolivia (+591)</option>
+                                        <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
+                                        <option data-countryCode="BW" value="267">Botswana (+267)</option>
+                                        <option data-countryCode="BR" value="55">Brazil (+55)</option>
+                                        <option data-countryCode="BN" value="673">Brunei (+673)</option>
+                                        <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
+                                        <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
+                                        <option data-countryCode="BI" value="257">Burundi (+257)</option>
+                                        <option data-countryCode="KH" value="855">Cambodia (+855)</option>
+                                        <option data-countryCode="CM" value="237">Cameroon (+237)</option>
+                                        <option data-countryCode="CA" value="1">Canada (+1)</option>
+                                        <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
+                                        <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
+                                        <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+                                        <option data-countryCode="CL" value="56">Chile (+56)</option>
+                                        <option data-countryCode="CN" value="86">China (+86)</option>
+                                        <option data-countryCode="CO" value="57">Colombia (+57)</option>
+                                        <option data-countryCode="KM" value="269">Comoros (+269)</option>
+                                        <option data-countryCode="CG" value="242">Congo (+242)</option>
+                                        <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
+                                        <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
+                                        <option data-countryCode="HR" value="385">Croatia (+385)</option>
+                                        <option data-countryCode="CU" value="53">Cuba (+53)</option>
+                                        <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
+                                        <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
+                                        <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+                                        <option data-countryCode="DK" value="45">Denmark (+45)</option>
+                                        <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
+                                        <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
+                                        <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
+                                        <option data-countryCode="EC" value="593">Ecuador (+593)</option>
+                                        <option data-countryCode="EG" value="20">Egypt (+20)</option>
+                                        <option data-countryCode="SV" value="503">El Salvador (+503)</option>
+                                        <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
+                                        <option data-countryCode="ER" value="291">Eritrea (+291)</option>
+                                        <option data-countryCode="EE" value="372">Estonia (+372)</option>
+                                        <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+                                        <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+                                        <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
+                                        <option data-countryCode="FJ" value="679">Fiji (+679)</option>
+                                        <option data-countryCode="FI" value="358">Finland (+358)</option>
+                                        <option data-countryCode="FR" value="33">France (+33)</option>
+                                        <option data-countryCode="GF" value="594">French Guiana (+594)</option>
+                                        <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
+                                        <option data-countryCode="GA" value="241">Gabon (+241)</option>
+                                        <option data-countryCode="GM" value="220">Gambia (+220)</option>
+                                        <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
+                                        <option data-countryCode="DE" value="49">Germany (+49)</option>
+                                        <option data-countryCode="GH" value="233">Ghana (+233)</option>
+                                        <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
+                                        <option data-countryCode="GR" value="30">Greece (+30)</option>
+                                        <option data-countryCode="GL" value="299">Greenland (+299)</option>
+                                        <option data-countryCode="GD" value="1473">Grenada (+1473)</option>
+                                        <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
+                                        <option data-countryCode="GU" value="671">Guam (+671)</option>
+                                        <option data-countryCode="GT" value="502">Guatemala (+502)</option>
+                                        <option data-countryCode="GN" value="224">Guinea (+224)</option>
+                                        <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
+                                        <option data-countryCode="GY" value="592">Guyana (+592)</option>
+                                        <option data-countryCode="HT" value="509">Haiti (+509)</option>
+                                        <option data-countryCode="HN" value="504">Honduras (+504)</option>
+                                        <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
+                                        <option data-countryCode="HU" value="36">Hungary (+36)</option>
+                                        <option data-countryCode="IS" value="354">Iceland (+354)</option>
+                                        <option data-countryCode="IN" value="91">India (+91)</option>
+                                        <option data-countryCode="ID" value="62">Indonesia (+62)</option>
+                                        <option data-countryCode="IR" value="98">Iran (+98)</option>
+                                        <option data-countryCode="IQ" value="964">Iraq (+964)</option>
+                                        <option data-countryCode="IE" value="353">Ireland (+353)</option>
+                                        <option data-countryCode="IL" value="972">Israel (+972)</option>
+                                        <option data-countryCode="IT" value="39">Italy (+39)</option>
+                                        <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
+                                        <option data-countryCode="JP" value="81">Japan (+81)</option>
+                                        <option data-countryCode="JO" value="962">Jordan (+962)</option>
+                                        <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
+                                        <option data-countryCode="KE" value="254">Kenya (+254)</option>
+                                        <option data-countryCode="KI" value="686">Kiribati (+686)</option>
+                                        <option data-countryCode="KP" value="850">Korea North (+850)</option>
+                                        <option data-countryCode="KR" value="82">Korea South (+82)</option>
+                                        <option data-countryCode="KW" value="965">Kuwait (+965)</option>
+                                        <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
+                                        <option data-countryCode="LA" value="856">Laos (+856)</option>
+                                        <option data-countryCode="LV" value="371">Latvia (+371)</option>
+                                        <option data-countryCode="LB" value="961">Lebanon (+961)</option>
+                                        <option data-countryCode="LS" value="266">Lesotho (+266)</option>
+                                        <option data-countryCode="LR" value="231">Liberia (+231)</option>
+                                        <option data-countryCode="LY" value="218">Libya (+218)</option>
+                                        <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+                                        <option data-countryCode="LT" value="370">Lithuania (+370)</option>
+                                        <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
+                                        <option data-countryCode="MO" value="853">Macao (+853)</option>
+                                        <option data-countryCode="MK" value="389">Macedonia (+389)</option>
+                                        <option data-countryCode="MG" value="261">Madagascar (+261)</option>
+                                        <option data-countryCode="MW" value="265">Malawi (+265)</option>
+                                        <option data-countryCode="MY" value="60">Malaysia (+60)</option>
+                                        <option data-countryCode="MV" value="960">Maldives (+960)</option>
+                                        <option data-countryCode="ML" value="223">Mali (+223)</option>
+                                        <option data-countryCode="MT" value="356">Malta (+356)</option>
+                                        <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
+                                        <option data-countryCode="MQ" value="596">Martinique (+596)</option>
+                                        <option data-countryCode="MR" value="222">Mauritania (+222)</option>
+                                        <option data-countryCode="YT" value="269">Mayotte (+269)</option>
+                                        <option data-countryCode="MX" value="52">Mexico (+52)</option>
+                                        <option data-countryCode="FM" value="691">Micronesia (+691)</option>
+                                        <option data-countryCode="MD" value="373">Moldova (+373)</option>
+                                        <option data-countryCode="MC" value="377">Monaco (+377)</option>
+                                        <option data-countryCode="MN" value="976">Mongolia (+976)</option>
+                                        <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
+                                        <option data-countryCode="MA" value="212">Morocco (+212)</option>
+                                        <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
+                                        <option data-countryCode="MN" value="95">Myanmar (+95)</option>
+                                        <option data-countryCode="NA" value="264">Namibia (+264)</option>
+                                        <option data-countryCode="NR" value="674">Nauru (+674)</option>
+                                        <option data-countryCode="NP" value="977">Nepal (+977)</option>
+                                        <option data-countryCode="NL" value="31">Netherlands (+31)</option>
+                                        <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
+                                        <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
+                                        <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
+                                        <option data-countryCode="NE" value="227">Niger (+227)</option>
+                                        <option data-countryCode="NG" value="234">Nigeria (+234)</option>
+                                        <option data-countryCode="NU" value="683">Niue (+683)</option>
+                                        <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
+                                        <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
+                                        <option data-countryCode="NO" value="47">Norway (+47)</option>
+                                        <option data-countryCode="OM" value="968">Oman (+968)</option>
+                                        <option data-countryCode="PW" value="680">Palau (+680)</option>
+                                        <option data-countryCode="PA" value="507">Panama (+507)</option>
+                                        <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
+                                        <option data-countryCode="PY" value="595">Paraguay (+595)</option>
+                                        <option data-countryCode="PE" value="51">Peru (+51)</option>
+                                        <option data-countryCode="PH" value="63">Philippines (+63)</option>
+                                        <option data-countryCode="PL" value="48">Poland (+48)</option>
+                                        <option data-countryCode="PT" value="351">Portugal (+351)</option>
+                                        <option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
+                                        <option data-countryCode="QA" value="974">Qatar (+974)</option>
+                                        <option data-countryCode="RE" value="262">Reunion (+262)</option>
+                                        <option data-countryCode="RO" value="40">Romania (+40)</option>
+                                        <option data-countryCode="RU" value="7">Russia (+7)</option>
+                                        <option data-countryCode="RW" value="250">Rwanda (+250)</option>
+                                        <option data-countryCode="SM" value="378">San Marino (+378)</option>
+                                        <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+                                        <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
+                                        <option data-countryCode="SN" value="221">Senegal (+221)</option>
+                                        <option data-countryCode="CS" value="381">Serbia (+381)</option>
+                                        <option data-countryCode="SC" value="248">Seychelles (+248)</option>
+                                        <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
+                                        <option data-countryCode="SG" value="65">Singapore (+65)</option>
+                                        <option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
+                                        <option data-countryCode="SI" value="386">Slovenia (+386)</option>
+                                        <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
+                                        <option data-countryCode="SO" value="252">Somalia (+252)</option>
+                                        <option data-countryCode="ZA" value="27">South Africa (+27)</option>
+                                        <option data-countryCode="ES" value="34">Spain (+34)</option>
+                                        <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
+                                        <option data-countryCode="SH" value="290">St. Helena (+290)</option>
+                                        <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
+                                        <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+                                        <option data-countryCode="SD" value="249">Sudan (+249)</option>
+                                        <option data-countryCode="SR" value="597">Suriname (+597)</option>
+                                        <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
+                                        <option data-countryCode="SE" value="46">Sweden (+46)</option>
+                                        <option data-countryCode="CH" value="41">Switzerland (+41)</option>
+                                        <option data-countryCode="SI" value="963">Syria (+963)</option>
+                                        <option data-countryCode="TW" value="886">Taiwan (+886)</option>
+                                        <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
+                                        <option data-countryCode="TH" value="66">Thailand (+66)</option>
+                                        <option data-countryCode="TG" value="228">Togo (+228)</option>
+                                        <option data-countryCode="TO" value="676">Tonga (+676)</option>
+                                        <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+                                        <option data-countryCode="TN" value="216">Tunisia (+216)</option>
+                                        <option data-countryCode="TR" value="90">Turkey (+90)</option>
+                                        <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
+                                        <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
+                                        <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+                                        <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
+                                        <option data-countryCode="UG" value="256">Uganda (+256)</option>
+                                        <option data-countryCode="GB" value="44">UK (+44)</option>
+                                        <option data-countryCode="UA" value="380">Ukraine (+380)</option>
+                                        <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+                                        <option data-countryCode="UY" value="598">Uruguay (+598)</option>
+                                        <option data-countryCode="US" value="1">USA (+1)</option> 
+                                        <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
+                                        <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
+                                        <option data-countryCode="VA" value="379">Vatican City (+379)</option>
+                                        <option data-countryCode="VE" value="58">Venezuela (+58)</option>
+                                        <option data-countryCode="VN" value="84">Vietnam (+84)</option>
+                                        <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
+                                        <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
+                                        <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+                                        <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
+                                        <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
+                                        <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                                        <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                                    </optgroup>
+                                </select>
+                            </tr>
+                            <tr >
+                                <td style="width: 50%;">
+                                <input type="radio" name="number">
+                                <label for="mobno">Mobile No.</label>
+                                </td>
+                                <td style="width: 50%;">
+                                <input type="radio" name="number">
+                                <label for="teleno">Telephone No.</label>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="width: 50%;">
+                                <p>Area/STD code</p>
+                                <input type="text" name="area">
+                                </td>
+                                <td style="width: 50%;">
+                                    <p>Telephone No./Mobile No.</p>
+                                    <input type="text" name="num">
+                                    </td>
+                            </tr>
+                           
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                    <p>E-Mail</p></td>
+                    <td style="width: 50%;">
+                    <input type="text" name="mailid">
+                </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                        <p>in case of a Citizen of India, then</p>
+                    </td>
+                    <td style="width: 50%;">
+                        <label for="citizen" style="padding-left: 60px;">AADHAR</label>
+                        <input type="radio" name="citizen">
+                        <label for="citizen" style="padding-left: 30px;">EID</label>
+                        <input type="radio" name="citizen">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="aadhar_name">
+                    </td>
+
+                    <td style="width: 50%;">
+                        <p><span>*</span> AADHAR Number </p>
+
+                    </td>
+                    <td style="width: 50%;">
+                        <input type="text" name="addharNumber" >
+                        <p><span class="blue_txt"> In case, Aadhar number is provided then the supporting proof documents is to be submitted with NSDL </span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                        <p> <span>*</span>Name as per Aadhar letter  or as per the enrollment ID of aadhar application form</p>
+                    </td>
+                    <td style="width: 50%;">
+                        <input type="text" name="addhar_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td style="width: 50%;">
+                        <p>GSTN</p>
+                    </td>
+                    <td>
+                        <input type="text" name="gstn" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="otherPan">
+                    </td>
+                    <td colspan="2">
+                        <p> Mention other permanent account number(PANs) if any, allotted to you. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                        <label for="pan1">PAN1</label>
+                        <input type="text" name="pan1">
+                    </td>
+                    <td style="width: 50%;">
+                        <label for="pan2">PAN2</label>
+                        <input type="text" name="pan2">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 50%;">
+                        <label for="pan3">PAN3</label>
+                        <input type="text" name="pan3">
+                    </td>
+                    <td style="width: 50%;">
+                        <label for="pan4">PAN4</label>
+                        <input type="text" name="pan4">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>VERIFICATION</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                      I/we
+                      <input type="text" name="verify">
+                      ,the applicant, im the capacity of
+                      <select name="parent">
+                          <option value="pleaseSelect">--Please Select--</option>
+                          <option value="myself">Myself</option>
+                          <option value="gardian">Gardian</option>
+                      </select>
+                      do hereby declare that what is stated above is true to the best of my information and belief. <br>
+                      I have enclosed
+                      <input type="text" name="details">
+                      number of documents in support of proposed changes/correction
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td colspan="2">
+                        <label for="place">place</label>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>verify Todays, the  DD MM YYYY</p>
+                        <input type="date" style="margin-left: 130px;">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>I have enclosed</p> 
+                        <select name="doc_encolsed" id="doc_encolsed_id" style="width: 90%;">
+                            <option value="select">---Please Select---</option>
+                            <option value="adhar">Adhar</option>
+                            <option value="voterId">Voter ID</option>
+                            <option value="ration">Ration Card</option>
+                            <option value="passport">Passport</option>
+                           
+                        </select>
+                        as the proof of identity.
+                        <select name="addressProof" id="doc_encolsed_address" style="width: 90%;">
+                            <option value="select">---Please Select---</option>
+                            <option value="adhar">Adhar</option>
+                            <option value="voterId">Voter ID</option>
+                            <option value="ration">Ration Card</option>
+                            <option value="passport">Passport</option>
+                     </select>
+                     as the proof of address,
+                     <select name="dobProof" id="doc_encolsed_dob" style="width: 90%;">
+                        <option value="select">---Please Select---</option>
+                        <option value="adhar">Adhar</option>
+                        <option value="voterId">Voter ID</option>
+                        <option value="ration">Ration Card</option>
+                        <option value="passport">Passport</option>
+                 </select>
+                 as the proof of Date of Birth and 
+                 <select name="panAllotment" id="pan">
+
+                    <option value="select">---Please Select---</option>
+                    <option value="pan">PAN</option>
+                    <option value="enrollment">Enrollment</option>
+                 </select>
+                 as the proof of PAN alloted.
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p style="display: inline; padding-right: 50px;">Wether you wish to have ?</p>
+                        <input type="radio" name="phyDig" id="Panform">
+                        <label for="phyDig" style="padding-right: 20px;" > Physical Pan card and e-Pan card</label>
+                        <input type="radio" name="phyDig" id="ecard" ">
+                        <label for="phyDig">Only e-Pan card</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>other Details</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>Depository Account Details</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <label for="dpId">DP ID: </label>
+                        <input type="text" name="dpId">
+                        <label for="clientId" style="padding-left: 20px;">Client ID:</label>
+                        <input type="text" name="clientId" >
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <p>Payment details</p>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <table class="no_border">
+                    <tbody>
+                        <tr class="no_border">
+                            <td colspan="3" class="no_border">
+                                <p style="display: inline;">For paperless PAN application </p>
+                                <input type="radio" name="paperless" id="paperlessPanYes">
+                                <label for="paperlessPanYes"> Yes</label>
+                                <input type="radio" name="paperless" id="paperlessPanNo">
+                                <label for="paperlessPanNo"> No</label>
+                            </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border">
+                                <input type="radio" name="dsc" id="dsc">
+                                <label for="dcs">DCS</label>
+                                <select name="dcs" id="dcs">
+                                    <option value="op1">Option 1</option>
+                                    <option value="op2">Option 2</option>
+                                  
+                                </select>
+                                <a href="#" style="margin-left: 20px; color:brown"> Guideline for DSC user</a>
+                            </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border" colspan="1">
+                            <p style="display: inline;">Upload Photo</p>
+                        </td>
+                        <td colspan="3" class="no_border">
+                            <input type="file" name="photo" id="photo">
+                        </td>
+                        <td colspan="3" class="no_border">
+                            <input type="file" name="photo" id="photo">
+                        </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border" colspan="1">
+                                <p>Upload Document</p>
+                            </td>
+                            <td class="no_border" colspan="3">
+                                <input type="file" name="document" id="document">
+                            </td>
+                            <td class="no_border" colspan="3">
+                                <p>OR</p>
+                            </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border" colspan="3">
+                                <input type="button" value=" Feth from digital locker">
+                            </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border">
+                                <p>ALRREADY UPLOADED PHTOT:</p>
+                            </td>
+                            <td class="no_border" colspan="2">
+                                <input type="text" name="alreadyPhoto" id="alreadyPhoto">
+                            </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border">
+                                <p>ALREDY UPLOADED SIGNATURE: </p>
+                            </td>
+                            <td class="no_border">
+                                <input type="text" name="alreadySign" id="alreadySign">
+                            </td>
+                        </tr>
+                        <tr class="no_border">
+                            <td class="no_border">
+                                <p>ALREDY UPLOADED DOCUMENTS:</p>
+                            </td>
+                            <td class="no_border" colspan="2">
+                                <textarea name="alreadyDoc" id="alreadyDoc" cols="50" rows="5"></textarea>
+                                <br>
+                                <input type="submit" value="submit" style="margin: 0px 150px">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
